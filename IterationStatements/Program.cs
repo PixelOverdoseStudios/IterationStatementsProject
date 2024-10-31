@@ -12,13 +12,13 @@ namespace IterationStatements
 
             //Create a List called "numbers" - DONE!
             List<int> numbers = new List<int>();  //DO NOT ERASE THIS! You will use this in the exercise.
-            
+
             //-----START HERE------------------------------------------
 
             //TODO - Create a variable of type int and name it "num"
             //TODO - Initialize the variable with a value of 0
 
-
+            int num = 0;
 
             //TODO - Create a do-while loop using the existing brackets as a template.
             // The existing brackets are placeholders for your loop code.
@@ -29,7 +29,13 @@ namespace IterationStatements
 
             {
                 // Your code goes here
-                numbers.Add(/*num*/); //uncomment out `num` to add it to the collection "numbers"
+
+                do
+                {
+                    num++;
+                    numbers.Add(num);
+                } 
+                while (num < 100);
             } 
             //TODO - Continue the loop while "num" is less than 100
             
@@ -43,7 +49,11 @@ namespace IterationStatements
             //    Hint: You can copy how this was done in the do-while loop
 
             {
-                // Your code goes here
+                while(num < 200)
+                {
+                    num++;
+                    numbers.Add(num);
+                }
             }
             
 
@@ -56,7 +66,10 @@ namespace IterationStatements
             // The existing brackets are placeholders for your loop code.
             // Inside this loop, print each number in "numbers".
             {
-                // Your code goes here
+                foreach(int number in numbers)
+                {
+                    Console.WriteLine(number);
+                }
             }
              
 
@@ -77,7 +90,12 @@ namespace IterationStatements
 
             {
                 //TODO - Inside the loop, place numbers[i] inside of the Console.WriteLine() method
-                Console.WriteLine(numbers[i]); // Example placement of numbers[i] inside Console.WriteLine
+                //Console.WriteLine(numbers[i]); // Example placement of numbers[i] inside Console.WriteLine
+
+                for(int i = 199; i <= numbers.Count; i--)
+                {
+                    Console.WriteLine(numbers[i]);
+                }
             }
 
             //------------End of exercise
